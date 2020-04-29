@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  scroll-behavior: smooth;
+}
+
+@keyframes zoom {
+  
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes type {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 75ch;
+  }
+}
+
+.carousel-item img {
+  animation: zoom 5s ease;
+}
+
+a {
+  text-decoration: none;
+  color: wheat;
+  font-weight: 800;
+  transition: all 0.5s ease-in-out;
+}
+// Body
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+// Topbar
+.top-bar {
+  background: #316dc3;
+  padding: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    color: white;
+    font-weight: normal;
+  }
+  a:hover {
+    padding: 6px;
+  }
+  .social {
+    padding: 5px;
+    flex: 0.75 2 250px;
+
+    i {
+      margin: 8px;
+    }
+  }
+
+  .top-text {
+    padding: 10px 0 0 0;
+    flex: 3 1 600px;
+    font-size: 1rem;
+    
+  }
+
+  .top-buttons {
+    font-size: 0.8rem;
+    padding: 5px;
+    flex: 0.75 2 270px;
+
+    button {
+      padding: 5px;
+      border: 1px solid black;
+    }
+  }
+}
+
+// Nav
+nav {
+  img {
+    width: 12rem;
+  }
+
+  li {
+    margin: 0 0.6rem;
+  }
+
+  .home {
+    background: #316dc3;
+    color: #ffffff !important;
+    padding: 10px 20px !important;
+    border-radius: 2rem;
+  }
+  .nav-link:hover {
+    background: #316dc3;
+    color: #ffffff !important;
+    padding: 10px 20px !important;
+    border-radius: 2rem;
+  }
+  .dropdown-item:hover {
+    background-color: #316dc3;
+    color: white !important;
+    padding: 10px 20px 10px 40px;
+  }
+  .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+}
+footer {
+  width: 100%;
+
+  clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: rgb(221, 221, 221);
+  line-height: 2rem;
+  padding: 70px 20px;
+  background-image: url("../images/hazrat.jpg");
+  background-color: #25272e;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+  .contact,
+  .useful-links,
+  .connect-with-us {
+    flex: 1 1 300px;
+    padding: 10px;
+  }
+
+  .contact {
+    padding: 50px 0px 0px 0px;
+  }
+  i {
+    background-color: #316dc3;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 4px;
+  }
+}
+
+.bottom-footer {
+  background: #316dc3;
+  padding: 15px;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a:hover {
+    color: #316dc3;
+    background: white;
+    padding: 8px;
+  }
+}
+
+.marquee {
+  display: flex;
+  background-color: #316dc3;
+  padding: 5px;
+}
+
+.scrolltotop {
+  background: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  height: 50px;
+  width: 50px;
+  padding: 2px;
+  text-align: center;
+  z-index: 100;
+
+  i {
+    color: #fff;
+    font-size: 42px;
+  }
+}
+
+.into-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 150px;
+  p {
+    text-align: justify;
+  }
+
+  @media only screen and (max-width: 700px) {
+    padding: 70px 50px;
+  }
+
+  .intro-icon {
+    margin: 20px;
+  }
+  .intro-icon::before {
+    content: "";
+    height: 2px;
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    width: 36px;
+  }
+  .intro-icon::after {
+    content: "";
+    height: 2px;
+    position: absolute;
+    left: 10px;
+    top: 30px;
+
+    width: 36px;
+  }
+}
+
+.counters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #316dc3;
+  text-align: center;
+  color: white;
+
+  @media only screen and (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media only screen and (max-width: 746px) {
+    grid-template-columns: 1fr;
+  }
+
+  div {
+    margin: 90px 0 100px 0;
+
+    @media only screen and (max-width: 1200px) {
+      margin: 70px 20px 20px 20px;
+    }
+    @media only screen and (max-width: 746px) {
+      margin: 70px 0 20px 0;
+    }
+  }
+  img {
+    width: 40px;
+  }
+
+  h2,
+  p,
+  span {
+    font-family: "Roboto Slab", serif;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    margin: 8px;
+  }
+  span {
+    color: #00ff00;
+    font-size: 1.3rem;
+  }
+}
+
+.doing {
+  text-align: center;
+  padding: 70px;
+  background-color: #f7f8fa;
+
+  @media only screen and (max-width: 700px) {
+    padding: 30px;
+  }
+}
+.doing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 20px;
+
+  @media only screen and (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media only screen and (max-width: 746px) {
+    grid-template-columns: 1fr;
+  }
+
+  div {
+    box-shadow: 0px 10px 41px -10px #aaaaaa;
+    padding: 30px;
+  }
+
+  p {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.3rem;
+    color: #316dc3;
+    margin: 10px;
+  }
+}
+
+.mission-and-events {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem;
+
+  @media only screen and (max-width: 700px) {
+    padding: 30px;
+  }
+
+  h2,
+  p {
+    font-family: "Roboto Slab", serif;
+    margin: 10px 0;
+    color: #316dc3;
+    text-transform: uppercase;
+  }
+  marquee {
+    margin: 3rem 0;
+  }
+
+  .mission {
+    flex: 2 1 600px;
+
+    div {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    div div {
+      background-color: #f7f8fa;
+      border: 0.001rem solid #dddddd;
+      margin: 1rem 2rem 0 0;
+      display: flex;
+      align-items: center;
+      padding: 1.1rem;
+      flex: 1 1 350px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+      p {
+        margin: 0 1rem;
+      }
+    }
+  }
+  .events {
+    flex: 1 2 300px;
+  }
+}
+
+.gallery {
+  text-align: center;
+  padding: 0rem 5rem 5rem 5rem;
+
+  @media only screen and (max-width: 700px) {
+    padding: 0 30px 30px 30px;
+  }
+
+  .pics {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+
+    .inner-pic {
+      flex: 1 1 150px;
+      padding: 0.1rem;
+      overflow: hidden;
+
+      img {
+        transition: transform 0.5s ease;
+      }
+    }
+    .inner-pic:hover img {
+      transform: scale(1.5);
+    }
+  }
+}
+.overlay-shade{
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  top: 0;
+  left: 0;
+}
