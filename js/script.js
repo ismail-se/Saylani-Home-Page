@@ -1,6 +1,9 @@
-
-
-const counters = document.querySelectorAll(".counter");
+$(window).on("scroll", function(){
+  
+  if($(window).scrollTop() >= 350){
+    console.log("jd");
+    $(window).off("scroll");
+    const counters = document.querySelectorAll(".counter");
 const speed = 300;
 
 
@@ -21,3 +24,6 @@ const counter = counters.forEach((counter) => {
 
   countUpdate();
 });
+  }
+}
+);
