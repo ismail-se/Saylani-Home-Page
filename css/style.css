@@ -187,6 +187,13 @@ footer {
   background-position: center;
 }
 
+@media only screen and (max-width: 700px) {
+  footer {
+    -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+  }
+}
+
 footer .contact,
 footer .useful-links,
 footer .connect-with-us {
@@ -255,6 +262,7 @@ footer i {
 }
 
 .into-sec {
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,7 +276,8 @@ footer i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 70px 150px;
+  padding: 70px 70px;
+  margin: auto;
 }
 
 .into-sec p {
@@ -277,7 +286,7 @@ footer i {
 
 @media only screen and (max-width: 700px) {
   .into-sec {
-    padding: 70px 50px;
+    padding: 70px 25px;
   }
 }
 
